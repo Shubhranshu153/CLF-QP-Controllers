@@ -1,0 +1,203 @@
+1
+ 
+ Parameters
+ ==========
+
+ Files
+ -----
+ Solution file..........         0       Old basis file ........         0       Standard input.........         5
+ Insert file............         0       New basis file ........         0       (Printer)..............         9
+ Punch file.............         0       Backup basis file......         0       (Specs file)...........         0
+ Load file..............         0       Dump file..............         0       Standard output........         6
+
+ Frequencies
+ -----------
+ Print frequency........       100       Check frequency........        60       Save new basis map.....       100
+ Summary frequency......       100       Factorization frequency        50       Expand frequency.......     10000
+
+ QP subproblems
+ --------------
+ QPsolver Cholesky......
+ Scale tolerance........     0.900       Minor feasibility tol..  1.00E-06       Iteration limit........     16000
+ Scale option...........         0       Minor optimality  tol..  1.00E-06       Minor print level......         1
+ Crash tolerance........     0.100       Pivot tolerance........  3.25E-11       New superbasics........        99
+ Crash option...........         3       Elastic weight.........  1.00E+05
+
+ Partial pricing
+ ---------------
+ LP Partial price.......         1       Prtl price section ( A)      1600       Prtl price section (-I)      1502
+ QP Partial price.......         1       Prtl price section ( A)      1600       Prtl price section (-I)      1502
+
+ The SQP Method
+ --------------
+ Minimize...............                 Cold start.............                 Proximal Point method..         1
+ Nonlinear objectiv vars      1600       Objective Row..........         1       Function precision.....  3.00E-13
+ Unbounded step size....  1.00E+20       Superbasics limit......      1600       Difference interval....  5.48E-07
+ Unbounded objective....  1.00E+10       Reduced Hessian dim....      1600       Central difference int.  6.70E-05
+ Major step limit.......  2.00E+00       Derivative linesearch..                 Derivative option......         1
+ Major iterations limit.      4800       Linesearch tolerance...   0.90000       Verify level...........         0
+ Minor iterations limit.       500       Penalty parameter......  0.00E+00       Major Print Level......         1
+ Time limit (secs)...... 9999999.0       Major optimality tol...  2.00E-06
+
+ Hessian Approximation
+ ---------------------
+ Hessian limited-memory.                 Hessian updates........        10       Hessian frequency......  99999999
+                                                                                 Hessian flush..........  99999999
+
+ Nonlinear constraints
+ ---------------------
+ Nonlinear constraints..      1491       Major feasibility tol..  1.00E-06       Violation limit........  1.00E+01
+ Nonlinear Jacobian vars      1600
+
+ Miscellaneous
+ -------------
+ LU factor tolerance....      3.99       LU singularity tol.....  3.25E-11       Timing level...........         3
+ LU update tolerance....      3.99       LU swap tolerance......  1.22E-04       Debug level............         0
+ LU partial  pivoting...                 eps (machine precision)  2.22E-16       System information.....        No
+                                                                                 Sticky parameters......        No
+
+ Total char*8  workspace       500       Total integer workspace  38276066       Total real    workspace  30094125
+ Total char*8  (minimum)       500       Total integer (minimum)   9606455       Total real    (minimum)  15752774
+ 
+1
+ 
+
+ 
+
+ Matrix statistics
+ -----------------
+               Total      Normal        Free       Fixed     Bounded
+ Rows           1502         397           1        1104           0
+ Columns        1600           0           0           0        1600
+
+ No. of matrix elements              2385610     Density      99.268
+ Biggest  constant element        1.0000E+00  (excluding fixed columns,
+ Smallest constant element        1.0000E+00   free rows, and RHS)
+
+ No. of objective coefficients             0
+
+ Nonlinear constraints    1491     Linear constraints      11
+ Nonlinear variables      1600     Linear variables         0
+ Jacobian  variables      1600     Objective variables   1600
+ Total constraints        1502     Total variables       1600
+1
+ 
+ Initial basis
+ -------------
+
+ No basis file supplied
+
+ Crash option  3
+
+ Crash on linear E  rows:
+ Slacks     0  Free cols     0  Preferred     0
+ Unit      10  Double        0  Triangle      0  Pad     0
+
+ Crash on linear LG rows:
+ Slacks     1  Free cols     0  Preferred     0
+ Unit       0  Double        0  Triangle      0  Pad     0
+
+ Itn      0: Feasible linear rows
+ Itn      0: PP1.  Minimizing  Norm(x-x0)
+
+ Itn      0: PP1.  Norm(x-x0) approximately minimized  (0.00E+00)
+
+ 
+ The user has defined 2387200   out of 2387200   first  derivatives
+
+ Cheap test of user-supplied problem derivatives...
+
+ The constraint gradients seem to be OK.
+
+ -->  The largest discrepancy was    9.15E-02  in constraint  2003
+ 
+
+ The objective  gradients seem to be OK.
+
+ Gradient projected in one direction   0.00000000000E+00
+ Difference approximation              0.00000000000E+00
+
+ Crash on nonlinear rows:
+ Slacks     0  Free cols     0  Preferred     0
+ Unit      10  Double      749  Triangle    220  Pad   512
+1
+ 
+ Itn      0: Hessian set to a scaled identity matrix
+
+    Itn     FP mult  FP step   rgNorm          NumInf         SumInf   +SBS   -SBS    -BS    Pivot     L+U ncp    nS condZHZ
+    100     1.4E+04  6.1E-08                      102  4.2037958E+02    506    506    611 -6.8E-01   27066
+ Itn    122: Infeasible QP subproblem
+ Itn    122: Elastic Phase 1 -- making non-elastic variables feasible
+ Itn    122: Infeasible subproblem. Elastic mode started with weight =  1.0E+05
+
+    Itn     QP mult  QP step   rgNorm  SumInfE NonOpt Elastic QP obj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS condZHZ
+    200    -5.7E+04  2.4E-02  5.6E+04  1.9E+01    484  2.0515182E+06     58    467         1.3E+00   29827         8 3.3E+09
+    300    -4.4E+01  1.0E+00  4.5E-07  1.9E+01    459  1.9770977E+06     26                          25407        38 2.8E+08
+    400    -1.4E+01  3.3E-01  9.7E+00  1.9E+01    415  1.9663203E+06    908    387         3.0E-04   25517        78 4.2E+02
+ 
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS condZHZ Penalty
+    451     0    451              1  1.0E+02  1.0E+00  0.0000000E+00   25533          100 4.8E+07         _  r iT
+ Itn    451: Hessian set to a scaled identity matrix
+
+    Itn     QP mult  QP step   rgNorm  SumInfE NonOpt Elastic QP obj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS condZHZ
+    551              1.0E+00  5.4E-07  4.3E+01    382  4.6674620E+06                                 31879       118 5.7E+07
+    651              1.0E+00  1.1E-07  4.3E+01    345  4.6381756E+06                                 30874       153 3.9E+07
+    751              1.0E+00  1.0E-07  4.3E+01    317  4.6239668E+06                                 31886       183 2.9E+07
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS condZHZ Penalty
+    801     1    350 4.4E-02      6  9.5E+01  4.2E-01  1.9726661E+06   31886          196 2.9E+07 4.1E+01 _  rliT
+
+    Itn     QP mult  QP step   rgNorm  SumInfE NonOpt Elastic QP obj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS condZHZ
+    901     1.1E+00  1.0E+00  1.1E-07  4.4E+01    185  4.4425360E+06    589                          25400       228 5.9E+08
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS condZHZ Penalty
+    996     2    195 1.6E-03      8  9.3E+01  1.0E+00  4.7889029E+06   25400          295 5.9E+08 1.1E+02 _s   iT
+
+    Itn     QP mult  QP step   rgNorm  SumInfE NonOpt Elastic QP obj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS condZHZ
+   1096              1.0E+00  5.0E-11  4.6E+01     99  4.6350945E+06                                 29445       303 6.3E+04
+   1196              1.0E+00  1.3E-10  4.6E+01     66  4.6350785E+06                                 30150       332 6.2E+04
+   1296              1.0E+00  1.8E-10  4.6E+01     15  4.6350727E+06                                 30177       376 6.2E+04
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS condZHZ Penalty
+   1319     3    323 2.3E-03     11  8.8E+01  1.0E+00  4.7879116E+06   30177          387 6.2E+04 1.1E+02 _ m  i
+ Search exit  6 -- no minimizer.       Major itn =      3
+ Itn   1319: Elastic weight increased to   1.000E+06
+ Itn   1319: Hessian off-diagonals discarded
+ Itn   1319: LU partial  pivoting tols       2.00      2.00
+ Itn   1419: Reduced Hessian is indefinite. Square of diag, min diag =  -5.7E+09  8.8E-07
+ Itn   1419: Indefinite QP reduced Hessian
+ Itn   1419: Hessian set to a scaled identity matrix
+
+    Itn     QP mult  QP step   rgNorm  SumInfE NonOpt Elastic QP obj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS condZHZ
+   1419                       1.4E-01  4.6E+01         4.6339407E+07                                 24520       370 4.8E+00
+ Itn   1445: Reduced Hessian is indefinite. Square of diag, min diag =  -4.7E+06  1.7E-07
+ Itn   1445: Indefinite QP reduced Hessian
+ Itn   1506: Reduced Hessian is indefinite. Square of diag, min diag =  -1.3E+08  1.9E-07
+ Itn   1506: Indefinite QP reduced Hessian
+
+    Itn     QP mult  QP step   rgNorm  SumInfE NonOpt Elastic QP obj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS condZHZ
+   1519              1.0E+00  1.4E-08  4.6E+01      7  4.6339348E+07                                 26879       373 1.9E+08
+   1619              1.0E+00  4.7E-05  4.6E+01      2  4.6339119E+07                                 30772       394 2.7E+07
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS condZHZ Penalty
+   1624     3    305             18  8.8E+01  1.0E+00  1.1182291E+06   30772    15    395 2.7E+07         _ mr i
+ Search exit  6 -- no minimizer.       Major itn =      3
+ Itn   1624: Elastic weight increased to   1.000E+08
+ Itn   1624: LU partial  pivoting tols       1.41      1.41
+   1624     3      0             31  8.8E+01  1.0E+00  1.0191813E+08   24843    25    395 1.8E+00         _ mr i
+ Itn   1624: LU partial  pivoting tols       3.99      3.99
+   1625     4      1 4.5E-11     38  8.8E+01  1.0E+00  4.6338722E+09   24832          395 3.0E+01 1.0E+05 _s   i
+ Search exit  6 -- no minimizer.       Major itn =      4
+ Itn   1625: Elastic weight increased to   1.000E+10
+ Itn   1625: Hessian off-diagonals discarded
+ Itn   1625: LU partial  pivoting tols       2.00      2.00
+   1645     4     20             56  8.8E+01  1.0E+00  1.0181908E+10   29101          395 3.7E+09         _s R i
+ Itn   1645: LU partial  pivoting tols       3.99      3.99
+ Itn   1645: Reduced Hessian is not positive definite. dpiv, Hdmin =  3.29E-02, 3.30E-02
+ Itn   1645: Reduced Hessian appears to have    128 small eigenvalues.  PD tol =  3.30E-02
+   1647     5      2 1.7E-07     58  8.8E+01  1.0E+00  4.6339561E+11   25317          266 8.5E+02 1.0E+07 _s   i
+   1648     6      1 4.2E-07     60  8.8E+01  1.0E+00  4.6339561E+11   24848          266 8.0E+02 1.0E+07 _    i
+   1649     7      1 2.0E-07     62  8.8E+01  1.0E+00  4.6339561E+11   24848          266 8.4E+02 1.0E+07 _    i
+   1650     8      1 8.0E-09     72  8.8E+01  1.0E+00  4.6339561E+11   24967     2    266 1.4E+02 1.0E+07 _    i
+   1651     9      1 7.3E-09     82  8.8E+01  1.0E+00  4.6339561E+11   24970          266 1.4E+02 1.0E+07 _    i

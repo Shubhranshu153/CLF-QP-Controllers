@@ -1,0 +1,24 @@
+%Impact/Switch
+function theta_dot_plus = impact_dynamics(z,nx,nu,nt,N)
+p=params();
+[x_f_inds,~,~]=sample_indices(N,nx,nu,nt);
+theta1=z(x_f_inds(1));
+theta2=z(x_f_inds(2));
+theta3=z(x_f_inds(3));
+theta4=z(x_f_inds(4));
+theta5=z(x_f_inds(5));
+theta_dot_1=z(x_f_inds(6));
+theta_dot_2=z(x_f_inds(7));
+theta_dot_3=z(x_f_inds(8));
+theta_dot_4=z(x_f_inds(9));
+theta_dot_5=z(x_f_inds(10));
+theta_dot_minus=[theta_dot_1;theta_dot_2;theta_dot_3;theta_dot_4;theta_dot_5];
+
+D = testMatrixM(theta1,theta2,theta3,theta4,theta5);
+J = [p.l1*cos(theta1),-p.l1*sin(theta1);p.l2*cos(theta2) , -p.l2*sin(theta2);0,0;p.l4*cos(theta4) ,-p.l4*sin(theta4);p.l5*cos(theta5),-p.l5*sin(theta5)]';
+theta_dot_plus = theta_dot_minus + inv(D)*J'*inv(J*inv(D)*J')*(-J*theta_dot_minus);
+end
+%switches:
+%link 5 with link 1
+%link 4 with link 2
+%link 3 unchanged
